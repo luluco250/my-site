@@ -1,0 +1,151 @@
+@import url("reset.css");
+@import url("utils.css");
+@import url("animations.css");
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: #000;
+	background: #fff;
+	line-height: initial;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+}
+
+#page-loader {
+	z-index: 1000;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: #f0f0f0;
+	background: #1a1a1a;
+}
+
+#page-loader.hidden {
+	display: block;
+	top: 100vh;
+	/* transform: translateY(100vh); */
+	/* background: none; */
+	transition: all 1s;
+	transition-timing-function: ease-in-out;
+}
+
+#page-header {
+	z-index: 100;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	color: #f0f0f0;
+	background: #353535;
+	overflow: hidden;
+}
+
+#page-navbar {
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+#page-logo {
+	margin-top: auto;
+	margin-bottom: auto;
+	font-family: monospace;
+	letter-spacing: 0.125em;
+	color: #0f0;
+	background: #000;
+	padding: 0.25em;
+	transform: translate3d(0, 0, 0);
+	transition: transform 0.25s;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#page-logo:hover {
+	transform: scale(1.2);
+	transition: transform 0.25s;
+}
+
+#page-logo:active {
+	transform: scale(0.8);
+	transition: transform 0.05s;
+}
+
+#page-navbar-links {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: stretch;
+}
+
+#page-navbar-links > li > a {
+	display: block;
+	padding: 1em;
+	transition: all 0.25s;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#page-navbar-links > li > a.active {
+	color: #353535;
+	background: #eaeaea;
+}
+
+#page-navbar-links > li > a:not(.active):focus {
+	outline: none;
+	text-decoration: underline;
+}
+
+#page-navbar-links > li > a:not(.active):hover {
+	animation: swing 0.25s;
+	color: #fff;
+}
+
+#page-navbar-links > li > a:not(.active):active {
+	transform: scale(0.8);
+	transition: all 0.05s;
+}
+
+main {
+	flex: 1;
+}
+
+#page-article {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+#page-footer {
+	color: #f0f0f0;
+	background: #353535;
+}
+
+#page-footer-content {
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0.8rem;
+	padding: 1em;
+}

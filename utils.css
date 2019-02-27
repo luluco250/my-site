@@ -1,0 +1,7 @@
+.hidden {
+	display: none;
+}
+
+.blink {
+	animation: blink 1s steps(1, end) infinite;
+}

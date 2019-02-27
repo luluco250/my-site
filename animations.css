@@ -1,0 +1,20 @@
+@keyframes swing {
+	25%, 75% {
+		transform: rotate(-10deg);
+	}
+	50% {
+		transform: rotate(20deg);
+	}
+}
+
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
+}
+
+@keyframes zoom {
+	100% {
+		transform: scale(1.2);
+	}
+}
